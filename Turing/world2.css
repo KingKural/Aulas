@@ -1,0 +1,68 @@
+/* Review2 div Code*/
+
+.world2 {
+    background-image: url(/Turing/images/pixel\ world\ map.jpg);
+    background-color: rgba(0,48,80,255);
+    height: 550px;
+    background-repeat: no-repeat;
+    background-position: 75% 25%;
+    background-size: 1000px;
+    margin-bottom: 50px;
+}
+
+.world2-txt {
+    padding-top: 80px;
+    color:white;
+    font-size: 48px;
+    font-family: sans-serif;
+
+}
+
+.world2-top2 {
+    font-weight: 555;
+}
+
+.world2-body2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+}
+
+.world2-body1 { 
+    color:white;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.world2-body-top {
+    font-size: 45px;
+    font-weight: 555;
+}
+
+.world2-buttons {
+}
+.world2-hire {
+    padding: 15px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color:#2961c4;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5%;
+    text-decoration:none;
+    margin-right: 15px;
+}
+
+.world2-apply {
+    padding: 15px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color:transparent;
+    border-radius: 5%;
+    text-decoration:none;
+    border:solid 2px white;
+}

@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 10px;
+
+}
+
+
+.container a:link {
+  color: Black;
+  background-color: transparent;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 18px;
+
+}
+
+.container a:link:hover {
+  color: rgb(65, 183, 246);
+}
+
+.container .pap {
+  padding: 8px;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color:deeppink !important;
+  border-radius: 5%;
+}
+

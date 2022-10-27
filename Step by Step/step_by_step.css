@@ -1,0 +1,19 @@
+body {
+    background: white;
+}
+
+.result-item {
+    background: white;
+    margin: 20px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #e5c9c9;
+
+    background: url("/Solo Work/Images/books-2.jpg") white no-repeat right;
+    background-size: auto;
+}
+
+body {
+    background: url("/solo work/images/books-1.jpg") bottom;
+    background-size: 10%;
+}

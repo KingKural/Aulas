@@ -1,0 +1,70 @@
+.explanation-top1 {
+    font-family:sans-serif;
+    font-weight:bold;
+    font-size:50px;
+    display:flex;
+    justify-content:center;
+    
+}
+
+.explanation-1 {
+    display: flex;
+    justify-content: center;
+    margin: 0px 300px;
+
+}
+
+.explanation-1 .ex1-1 {
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    max-width: 950px;
+}
+
+.explanation-1 .ex-tilto {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.explanation-1 .ex-logo {
+    width: 3em;
+    height: 3em;
+}
+
+
+.explanation-top2 {
+    font-family:sans-serif;
+    font-weight:bold;
+    font-size:50px;
+    display:flex;
+    justify-content:center;
+    margin:auto;
+}
+
+.explanation-2 {
+    display: flex;
+    justify-content: center;
+    margin: 0px 300px;
+
+}
+
+
+
+.explanation-2 .ex2-1 {
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    max-width: 950px;
+}
+
+.explanation-2 .ex-tilto2 {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.explanation-2 .ex-logo2 {
+    width: 3em;
+    height: 3em;
+}

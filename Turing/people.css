@@ -1,0 +1,56 @@
+/* People div Code*/
+
+.people {
+    background-color: whitesmoke;
+}
+
+.people-head {
+    display: flex;
+    align-items: center;
+}
+
+.people-head1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.people-head2 {
+    margin: 10px;
+    font-size: 33px;
+    color: red;
+}
+
+.people-head3 {
+    font-size: 18px
+}
+
+.people-head-right {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.people-head-right1 {
+    margin: 10px;
+    font-size: 28px;
+    color: gold;
+}
+
+.people-head-right2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.people-head-right3 {
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.people-head-right4 {
+font-size: 13px;    
+}
+
+.people-link {
+    font-size: 17px;
+}
+

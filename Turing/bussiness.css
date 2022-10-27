@@ -1,0 +1,57 @@
+/*Bussiness Div Code */
+
+.bussiness {
+    padding-bottom:30px;
+}
+.bus-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+  }
+
+.bus-top {
+    text-align:center;
+    font-weight:500;
+    color:black;
+    font-size:35px;
+}
+
+.bus-block-1{ 
+    display: flex;
+    align-items: center;
+
+}
+
+.bus-icon {
+    font-size: 22px;
+    margin-right: 10px;
+    color:lightgreen;
+    padding:3px 12px;
+    background-color: whitesmoke;
+
+}
+
+.bus-item-txt {
+    font-size: 20px;
+    font-weight: 500;
+    color:black;
+}
+
+.bus-txt-top {
+    color:#1FB70B;
+    font-weight: 500;
+    font-size:40px;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.bus-body {
+    color:black;
+    font-weight: 500;
+    font-size:20px;
+    margin-top:15px;
+}
+
+.green-inside {
+    color:#1FB70B;
+}

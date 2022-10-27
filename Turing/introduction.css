@@ -1,0 +1,70 @@
+/* Intro div Code*/
+
+.intro2 {
+    display: flex;
+}
+
+.intro-left {
+    margin-top:120px;
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+}
+
+.intro-left .intro-tilto {
+    font-weight: bold;
+    font-size: 45px;
+    font-family: sans-serif;
+}
+
+.intro-left .intro-body {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.blue-in {
+    color:blue;
+}
+
+.intro-right {
+
+    height: 650px;
+    background-image: url(/Turing/images/Building\ blocks-cuatse.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+}
+
+.intro-hire {
+    padding: 15px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color: #2961c4;
+    border-radius: 5%;
+    text-decoration:none;
+}
+.intro-txt {
+    font-size:15px;
+    margin:20px 0px;
+}
+
+.intro-apply {
+    margin-left: 2px;
+    font-size:20px;
+    text-decoration: none;
+}
+
+.intro-logos .logos {
+    display:flex;
+    justify-content:space-between;
+    justify-items:left;
+    height:50px;
+}
+
+.intro-logos .logos-txt {
+    font-size:15px;
+    font-weight: bold;
+    color:lightgrey;
+}
+

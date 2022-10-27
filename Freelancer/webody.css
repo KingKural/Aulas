@@ -1,0 +1,71 @@
+.webody {
+    background-image: url(/Freelancer/Images/money-typing.gif);
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content:center !important;
+    
+    height: 800px;
+    font-family: sans-serif;
+}
+
+
+.webody .tilto {
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.webody .list {
+    color: white;
+    font-size: 18px;
+}
+
+
+
+.info-body {
+    display: flex-column;
+    max-width: 550px;
+    height: 500px;
+    padding-left: 15px;
+}
+
+.info-body .buttons {
+    margin-top: 40px;
+}
+
+.webody a:link,
+a:visited {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.webody a:hover {
+    filter: brightness(88%);
+
+}
+
+.webody .hire {
+
+    padding: 15px;
+    font-family: sans-serif;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    background-color: deeppink;
+    border-radius: 4%;
+}
+
+.webody .earn {
+
+    padding: 15px;
+    font-family: sans-serif;
+    border: white 1px solid;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 4%;
+}

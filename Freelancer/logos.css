@@ -1,0 +1,19 @@
+.logos-container{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    background-color: white;
+    font-family: sans-serif;
+    padding: 30px;
+    margin: 0px 300px;
+
+}
+
+.logos-container img {
+    max-width: 10%;
+    height: 50px;
+}
+
+.logos .text {
+    font: size 50px;
+}

@@ -1,0 +1,41 @@
+.nav-cont {
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.navigation-container-left {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    padding: 0px;
+    display: flex;
+    align-content: center;
+    margin: auto;
+}
+
+.navigation-container-right {
+    margin: auto;
+    padding-left: 200px;
+}
+
+.nav-cont a:link,
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.nav-cont a:hover {
+    background-color: grey;
+}
+
+.nav-cont .fj,
+.hf,
+.gi,
+.abt,
+.resc {
+    padding: 15px;
+
+}

@@ -1,0 +1,80 @@
+.search-bar {
+
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    text-align: center;
+
+}
+
+.search-bar input,
+.search-bar button {
+    padding 10px 20px
+}
+
+.search-bar input {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 200px;
+    background-color: purple;
+    text-align: center;
+    color: white;
+
+}
+
+.search-bar button {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: purple;
+    color: white;
+}
+
+.search-bar button:hover {
+    cursor: pointer;
+    background-color: rgb(234, 160, 234);
+}
+
+.search-bar button:active {
+    background: rgb(229, 59, 251);
+
+}
+
+.suggestions {
+    margin: 5px;
+    box-shadow: 0 0 5px white;
+    /*border-radius: 30px;*/
+    background-color: purple;
+    color: black;
+    /*overflow: hidden;*/
+    border-style: solid;
+    text-align:center;
+    align-content:center;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+
+.suggestions .item:hover {
+    cursor: pointer;
+    background-color: rgb(234, 160, 234);
+    transition: .3s;
+
+
+}
+
+.suggestions .item:active {
+    background: rgb(229, 59, 251);
+
+}
+
+.suggestions .item {
+    border: 1px solid black;
+    padding: 15px 15px;
+    /*border-bottom: 1px solid*/
+ 
+}
+
+/*.suggestions .item:last-child {
+    border: 0
+
+}*/

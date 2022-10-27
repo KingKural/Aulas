@@ -1,0 +1,119 @@
+/* Intro3 div Code*/
+
+.intro-3 {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background-color: whitesmoke;
+}
+
+.intro-3-top {
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    font-size: 48px;
+}
+
+.intro-blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.intro-block-1 {
+    margin-top: 55px;
+    padding: 20px 30px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.intro-block-2 {
+    margin-top: 55px;
+    padding: 20px 65px;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.intro-block-3 {
+    margin-top: 55px;
+    padding: 20px 30px;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.intro-block-top {
+    font-weight: 550;
+    text-align: left;
+    font-size: 20px;
+}
+
+.block-list {
+    font-size: 18px;
+    text-align: left;
+    margin-left: -10px;
+    ;
+}
+
+.intro-block-img {
+    height: 220px;
+}
+
+.intro-block-2-2 {
+    display: flex;
+    align-items: center;
+    background-color: rgba(86, 168, 247, .1);
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+}
+
+.intro-3-icon {
+    margin-right: 6px;
+    color: #2e6edf;
+    font-size: 18px;
+}
+
+.intro-3-item-txt {
+    color: #2e6edf;
+    font-size: 18px;
+    margin-left: 6px;
+    font-weight: 550;
+}
+
+.intro-block-2-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2e6edf;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+}
+
+.intro-block-2-3:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: solid 2px #2e6edf;
+    color:#2e6edf;
+}
+
+.intro-3-icon-1 {
+    margin-right: 6px;
+    color: white;
+    font-size: 18px;
+}
+
+.intro-3-item-txt-1 {
+    color: white;
+    font-size: 18px;
+    margin-left: 6px;
+    font-weight: 550;
+}

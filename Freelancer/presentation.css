@@ -1,0 +1,9 @@
+.presentation .container{
+    display:flex;
+    justify-content:center;
+    margin:auto;
+}
+
+.present-box img {
+    size:1em;
+    }
