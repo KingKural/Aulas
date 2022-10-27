@@ -4,20 +4,19 @@
 }
 
 .credits .container {
+    margin-top: 0px;
     padding: 0px;
-    margin: 0px;
 }
 
 .credits-files {
     display: flex;
-    justify-content: center;
     flex-direction: row;
 }
 
 .credit-top {
     display: flex;
     align-items: center;}
-    
+
 .credit-cdc {
     display: flex;
     flex-direction: row;
