@@ -1,13 +1,19 @@
 /* Header div Code*/
 
 .container {
-    margin-top: 22px;
+        margin-top:22px;
 }
 
-.head-top {
+.head-top{
+    display: flex;
+    align-items: center;
+}
+
+.head-top-logo{
     font-size:35px;
     font-weight:bold;
     font-family:sans-serif;
+ 
 
 }
 
