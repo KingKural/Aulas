@@ -20,7 +20,7 @@ function calculation(a, b, operator) {
 let phoneBook = {
     Abel: 5802943,
     Laura: 9761405,
-    Lisa: 5850628 , //not lisa number
+    Lisa: 5850628, //not lisa number
     Adilson: 9240912,
     Victor: 9519228
 };
@@ -34,21 +34,21 @@ function guessThePhone(number) {
     }
 };
 
-function guessTheNumber (name) {
+function guessTheNumber(name) {
     for (key in phoneBook) {
         const contactName = key;
         if (name == contactName)
             return phoneBook[key];
-    } 
+    }
     return "This Person Doesn't Exist!"
 };
 
-function longestStringInArray (aList){
+function longestStringInArray(aList) {
 
 }
 
-function encodeString (string) {
-    
+function encodeString(string) {
+
 }
 
 
@@ -72,3 +72,72 @@ function division(a, b) {
 function subtract(a, b) {
     return a - b
 };
+
+function guessTheNumber2(name) {
+    if (phoneBook[name] == undefined) {
+        return "The name" + name + " is not registered!";
+    }
+    return phoneBook[name];
+
+}
+
+function addPhoneNumber2(name, number) {
+    phoneBook[name] = number;
+    return phoneBook;
+}
+
+function deletePhoneNumber(name) {
+    delete phoneBook[name];
+    return phoneBook;
+}
+
+function managePhoneBook(name, number, operation) {
+    if (operation == "add") {
+        return addPhoneNumber2(name, number)
+        
+    } else if (operation == "remove") {
+        return deletePhoneNumber(name)
+    }
+    else if (operation == "find") {
+        return guessTheNumber2(name)
+    }
+    else { return "Action Not Possible" };
+
+}
+
+let phoneBook2 = {
+
+};
+
+function guessTheNumber3(name) {
+    if (phoneBook2[name] == undefined) {
+        return "The name" + name + " is not registered!";
+    }
+    return phoneBook2[name];
+
+}
+
+function addPhoneNumber3(name, number) {
+    phoneBook2[name] = number;
+    return phoneBook2;
+}
+
+function deletePhoneNumber2(name) {
+    console.log(phoneBook2);
+    delete phoneBook2[name];
+    return phoneBook2;
+}
+
+function managePhoneBook2(name, number, operation) {
+    if (operation == "add") {
+        return addPhoneNumber3(name, number)
+        
+    } else if (operation == "remove") {
+        return deletePhoneNumber2(name)
+    }
+    else if (operation == "find") {
+        return guessTheNumber3(name)
+    }
+    else { return "Action Not Possible" };
+
+}
