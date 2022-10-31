@@ -149,10 +149,20 @@ function spellingBee(string) {
 }
 
 function spellingBee2(string) {
-    for (let i =0; i < string.length; i++) {console.log(string[i])}
+    for (let i = 0; i < string.length; i++) { console.log(string[i]) }
 }
 
 function spellingBee2Behind(string) {
-    for (let i =string.length-1; i>=0; i--) {console.log(string[i])}
+    for (let i = string.length - 1; i >= 0; i--) { console.log(string[i]) }
 }
 
+function countVowel(string) {
+    string = string.toLocaleLowerCase();
+    let vowelCount = 0
+    for (let i = 0; i < string.length; i++) {
+
+        if (string[i] == "a" || string[i] == "e" || string[i] == "i"|| string[i] == "o"|| string[i] == "u") {vowelCount ++ }
+    }
+    return vowelCount;
+
+}
