@@ -94,7 +94,7 @@ function deletePhoneNumber(name) {
 function managePhoneBook(name, number, operation) {
     if (operation == "add") {
         return addPhoneNumber2(name, number)
-        
+
     } else if (operation == "remove") {
         return deletePhoneNumber(name)
     }
@@ -131,7 +131,7 @@ function deletePhoneNumber2(name) {
 function managePhoneBook2(name, number, operation) {
     if (operation == "add") {
         return addPhoneNumber3(name, number)
-        
+
     } else if (operation == "remove") {
         return deletePhoneNumber2(name)
     }
@@ -141,3 +141,18 @@ function managePhoneBook2(name, number, operation) {
     else { return "Action Not Possible" };
 
 }
+
+function spellingBee(string) {
+    for (i in string) {
+        console.log(string[i]); i++;
+    }
+}
+
+function spellingBee2(string) {
+    for (let i =0; i < string.length; i++) {console.log(string[i])}
+}
+
+function spellingBee2Behind(string) {
+    for (let i =string.length-1; i>=0; i--) {console.log(string[i])}
+}
+
