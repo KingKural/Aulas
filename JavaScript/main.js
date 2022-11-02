@@ -175,6 +175,7 @@ function turnIntoAsterisk(text) {
 }
 
 function searchingFor(string, word) {
+    //using the .includes(text-here) string method to find a word in a string
     lowered = string.toLocaleLowerCase();
     result = lowered.includes(word)
     return result;
@@ -182,27 +183,86 @@ function searchingFor(string, word) {
 }
 
 function startsWith(stringToSearch, wordToFind) {
+    //using the .startsWith(text goes here) string method
     return stringToSearch.startsWith(wordToFind);
 }
 
 function startWithV2(stringToSearch, wordToFind) {
+    // using the .substring(#,#) string method
     let firstWord = stringToSearch.substring(0, wordToFind.length)
     return firstWord == wordToFind;
 }
 
 function startWithV3(stringToSearch, wordToFind) {
+    //using for loop with extra steps
     let firstWord = ""
     for (i = 0; i < stringToSearch.length; i++) {
-        if (stringToSearch[i] == wordToFind[i]) {firstWord = firstWord + stringToSearch[i]}
-
+        if (stringToSearch[i] == wordToFind[i]) { firstWord = firstWord + stringToSearch[i] }
     }
     return firstWord == wordToFind;
 }
 
 function startWithV4(stringToSearch, wordToFind) {
-        for (i = 0; i < wordToFind.length; i++) {
-        if (stringToSearch[i] !== wordToFind[i]) {return false}
-
+    //using a for loop method
+    for (i = 0; i < wordToFind.length; i++) {
+        if (stringToSearch[i] !== wordToFind[i]) { return false }
     }
     return true;
 }
+
+function startWithV5(stringToSearch, wordToFind) {
+    //using the .slice(#,#) string method
+    let sliced = stringToSearch.slice(0, wordToFind.length)
+    return sliced === wordToFind;
+}
+
+
+function concString(text, value = 1) {
+    //using the for loop method
+    let concatenation = "";
+    for (i = 0; i < value; i++) { concatenation = concatenation + text }
+
+    return concatenation;
+}
+
+
+function concStringV2(text, value = 1) {
+    //using the .repeat(#) string method
+    return text.repeat(value);
+}
+
+/* function removeThings(text) {
+let removed = " "
+    for (let i = 0; i < text.length; i++) {
+
+        if (text[i] == "&" || text[i] == "<" || text[i] == ">" || text[i] == "'" || text[i] == "\"") { text[i] = "" }
+
+
+    }
+    return removed
+} */
+
+function removeThings(text) {
+    let removed = text;
+    let removed2 = "";
+    let removed3 = "";
+    let removed4 = "";
+    let removed5 = "";
+    let removed6 = "";
+    for (let i = 0; i < removed.length; i++) {
+        removed2 = removed.replaceAll("&", "");
+        removed3 = removed2.replaceAll("<", "");
+        removed4 = removed3.replaceAll(">", "");
+        removed5 = removed4.replaceAll("\'", "");
+        removed6 = removed5.replaceAll("\"", "");
+    }
+    return removed6;
+}
+
+/*function stringIntoPieces(text, value = 1) {
+    var chunks = [];
+
+    for (var i = 0, charsLength = str.length; i < charsLength; i += 3) {
+        chunks.push(str.substring(i, i + 3));
+    }
+}*/
