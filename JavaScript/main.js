@@ -161,8 +161,48 @@ function countVowel(string) {
     let vowelCount = 0
     for (let i = 0; i < string.length; i++) {
 
-        if (string[i] == "a" || string[i] == "e" || string[i] == "i"|| string[i] == "o"|| string[i] == "u") {vowelCount ++ }
+        if (string[i] == "a" || string[i] == "e" || string[i] == "i" || string[i] == "o" || string[i] == "u") { vowelCount++ }
     }
     return vowelCount;
 
+}
+
+function turnIntoAsterisk(text) {
+    let textTurned = "";
+
+    for (i = 0; i < text.length; i++) { textTurned = textTurned + "*" }
+    return textTurned;
+}
+
+function searchingFor(string, word) {
+    lowered = string.toLocaleLowerCase();
+    result = lowered.includes(word)
+    return result;
+
+}
+
+function startsWith(stringToSearch, wordToFind) {
+    return stringToSearch.startsWith(wordToFind);
+}
+
+function startWithV2(stringToSearch, wordToFind) {
+    let firstWord = stringToSearch.substring(0, wordToFind.length)
+    return firstWord == wordToFind;
+}
+
+function startWithV3(stringToSearch, wordToFind) {
+    let firstWord = ""
+    for (i = 0; i < stringToSearch.length; i++) {
+        if (stringToSearch[i] == wordToFind[i]) {firstWord = firstWord + stringToSearch[i]}
+
+    }
+    return firstWord == wordToFind;
+}
+
+function startWithV4(stringToSearch, wordToFind) {
+        for (i = 0; i < wordToFind.length; i++) {
+        if (stringToSearch[i] !== wordToFind[i]) {return false}
+
+    }
+    return true;
 }
