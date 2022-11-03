@@ -231,17 +231,6 @@ function concStringV2(text, value = 1) {
     return text.repeat(value);
 }
 
-/* function removeThings(text) {
-let removed = " "
-    for (let i = 0; i < text.length; i++) {
-
-        if (text[i] == "&" || text[i] == "<" || text[i] == ">" || text[i] == "'" || text[i] == "\"") { text[i] = "" }
-
-
-    }
-    return removed
-} */
-
 function removeThings(text) {
     let removed = text;
     let removed2 = "";
@@ -259,10 +248,75 @@ function removeThings(text) {
     return removed6;
 }
 
-/*function stringIntoPieces(text, value = 1) {
-    var chunks = [];
+function chunkString(text, value = 1) {
+    //using .slice(#,#) string method
+    let chunkedString = [];
+    if (value == 1) { chunkedString.push(text) } else {
+        for (let i = 0; i < text.length; i = i + value) {
+            chunkedString.push(text.slice(i, i + value));
+        }
 
-    for (var i = 0, charsLength = str.length; i < charsLength; i += 3) {
-        chunks.push(str.substring(i, i + 3));
     }
-}*/
+    return chunkedString;
+}
+
+function chunkStringV2(text, value = 1) {
+    //using if else method
+    let chunkedString = []
+    let chunkedPiece = "";
+    if (value == 1) { chunkedString.push(text); }
+    else {
+        for (let i = 0; i < text.length; i++) {
+            chunkedPiece = chunkedPiece + text[i];
+            if (chunkedPiece.length == value) {
+                chunkedString.push(chunkedPiece);
+                chunkedPiece = "";
+            }
+        }
+    }
+    chunkedString.push(chunkedPiece);
+    return chunkedString;
+}
+
+function chunkStringV3(text, value = 1) {
+    //using .substring(#,#) string method
+    let chunkedString = [];
+    if (value == 1) { chunkedString.push(text) } else {
+        for (let i = 0; i < text.length; i = i + value) {
+            chunkedString.push(text.substring(i, i + value));
+        }
+    }
+    return chunkedString;
+}
+
+
+function itsVaderTime(symbol) {
+    // too many steps
+    let data = new Date();
+    let dataCut = data.getDate() + "/" + data.getMonth() + "/" + data.getFullYear();
+    let dataSlash = data.getDate() + "-" + data.getMonth() + "-" + data.getFullYear();
+
+    if (symbol == "/") { return dataCut }
+    else if (symbol == "-") { return dataSlash }
+    else { return "Invalid" }
+}
+
+function itsVaderTimeV2(symbol) {
+    // .getMonth() values range from 0-11,  so adding a +1 you get the "correct" month display
+    let data = new Date();
+    let month = data.getMonth() + 1
+    let dataSymbol = data.getDate() + symbol + month + symbol + data.getFullYear();
+    if (symbol) { return dataSymbol; }
+    else { return "Invalid" }
+}
+
+function itsVaderTimeV3(symbol) {
+    // turning the .getMonth() value and turning it into a String of said Month
+    let data = new Date();
+    month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let dataSymbol = data.getDate() + symbol + month[data.getMonth()] + symbol + data.getFullYear();
+
+    if (symbol) { return dataSymbol; }
+    else { return "Invalid" }
+
+}
