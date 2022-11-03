@@ -304,7 +304,7 @@ function itsVaderTime(symbol) {
 function itsVaderTimeV2(symbol) {
     // .getMonth() values range from 0-11,  so adding a +1 you get the "correct" month display
     let data = new Date();
-    let month = data.getMonth() + 1
+    const month = data.getMonth() + 1
     let dataSymbol = data.getDate() + symbol + month + symbol + data.getFullYear();
     if (symbol) { return dataSymbol; }
     else { return "Invalid" }
@@ -313,10 +313,48 @@ function itsVaderTimeV2(symbol) {
 function itsVaderTimeV3(symbol) {
     // turning the .getMonth() value and turning it into a String of said Month
     let data = new Date();
-    month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let dataSymbol = data.getDate() + symbol + month[data.getMonth()] + symbol + data.getFullYear();
 
     if (symbol) { return dataSymbol; }
     else { return "Invalid" }
 
+}
+
+function itsVaderTimeClash(vader1, vader2) {
+    let vaderTime1 = vader1;
+    let vaderTime2 = vader2;
+
+    if (vaderTime1 < vaderTime2) { return "Date-2 > Date-1" }
+    else if (vaderTime1 > vaderTime2) { return "Date-1 > Date-2" }
+    else if (vaderTime1.getTime() === vaderTime2.getTime()) { return "Dates Are Equal" }
+};
+
+function itsVaderTimeClashV2(vader1, vader2) {
+    let vaderTime1 = new Date(vader1);
+    let vaderTime2 = new Date(vader2);
+
+    if (vaderTime1 < vaderTime2) { return "Date-2 > Date-1" }
+    else if (vaderTime1 > vaderTime2) { return "Date-1 > Date-2" }
+    else if (vaderTime1.getTime() === vaderTime2.getTime()) { return "Dates Are Equal" }
+};
+
+function itsVaderTimeBomb(hour) {
+    let data = new Date();
+    return newData = new Date(data.setHours(hour)).toString();
+}
+function itsVaderTimeBombV2(date,hour) {
+    l   return newData = new Date(date.setUTCHours(date.getHours()+1+hour));
+}
+
+function weekEnd(data) {
+
+    const weekDay = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+
+    if (data.getDay() == 0 || data.getDay() == 5 || data.getDay() == 6) {
+        return "Lelelelê! Leleleô! Hoje é " + weekDay[data.getDay()] + "!"
+    }
+    else {
+        return "Dia de Trabalho"
+    }
 }
