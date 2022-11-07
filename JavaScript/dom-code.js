@@ -81,25 +81,41 @@ function messageTheCount() {
 
 function alertTheMessages() {
     let listedItem = "";
+
     let liArray = document.querySelectorAll("#message-list p")
+
     for (i of liArray) { listedItem = listedItem += i.textContent + "\n" }
+
     alert(listedItem)
 }
 
 function countUp() {
-    let span = document.querySelector("#counter span")
-    let number = parseInt(span.textContent);
-    let total = number + 1
-    span.textContent = total
+    let span = document.querySelector("#counter span");
+
+    if (span.textContent <= 9) { span.textContent = parseInt(span.textContent) + 1 };
+    colorChange(span)
 }
 
 function countDown() {
-    let span = document.querySelector("#counter span")
+    let span = document.querySelector("#counter span");
 
-    span.textContent = parseInt(span.textContent) - 1
+    if (span.textContent >= 2) { span.textContent = parseInt(span.textContent) - 1 };
+    colorChange(span)
 }
 
 function resetIt() {
-    let span = document.querySelector("#counter span")
-    span.textContent = 1
+    let span = document.querySelector("#counter span");
+
+    document.querySelector("#counter span").textContent = 1;
+    colorChange(span)
+}
+
+function colorChange(span) {
+    if (span.textContent <= 4) { span.style.color = "red" }
+    else { span.style.color = "Green" }
+}
+
+function color (){
+    let cor = document.querySelector("#colorToSelect").value
+    document.querySelector(".colorBox").style.backgroundColor = cor
 }

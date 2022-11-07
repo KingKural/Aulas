@@ -8,6 +8,7 @@
     <title> JavaScript</title>
     <script src="/JavaScript/main.js"></script>
     <script src="/JavaScript/dom-code.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -24,10 +25,10 @@
     <input type="text" id="numero" name="numero" placeholder="Input Text then Click -->">
     <button onclick="getNumber()">Click Ear Again</button>
     <button onclick="getRandomNumber()">Click Ear to add Random #</button>
-    
+
     <div id="showNumber"> Start Listing<br> </div>
 
-    
+
     <div id="showNumber"></div>
 
     <div id="soma">
@@ -52,22 +53,35 @@
     <button onclick="alertTheCount()"> Click Ear to Alert! "Let's Count"</button>
 
     <div class="Aula">
-        
+
         <h1>Aula</h1>
         <button onclick="alertTheMessages()"> Click Ear to Alert! "My Messages"</button>
         <div id="message-list">
             <h3> My Messages</h2>
-            <p>My Message 01</p>
-            <p>My Message 02</p>
-            <p>My Message 03</p>
-            <p>My Message 04</p>
-            <p>My Message 05</p>
+                <p>My Message 01</p>
+                <p>My Message 02</p>
+                <p>My Message 03</p>
+                <p>My Message 04</p>
+                <p>My Message 05</p>
         </div>
-        <div id="counter" style="border: 1px solid black">
-            <button onclick="countUp()">Count Up</button> 
+        <div id="counter">
+            <button onclick="countUp()">Count Up</button>
             <button onclick="countDown()">Count Down</button>
             <button onclick="resetIt()">Reset</button>
-            <span>1</span>
+            <br><span>1</span>
+        </div>
+        <div id="select-color">
+            <select name="color" id="colorToSelect" onchange="color()">
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+                <option value="white">white</option>
+                <option value="black">black</option>
+                
+            </select>
+            <span class="colorBox"></span>
+
         </div>
 
 
