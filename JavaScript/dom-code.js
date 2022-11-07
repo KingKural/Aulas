@@ -115,7 +115,18 @@ function colorChange(span) {
     else { span.style.color = "Green" }
 }
 
-function color (){
+function color() {
     let cor = document.querySelector("#colorToSelect").value
     document.querySelector(".colorBox").style.backgroundColor = cor
+}
+
+let stop = undefined;
+
+function toInfinity() {
+    let span = document.querySelector("#clock-counter span");
+    span.textContent = parseInt(span.textContent) + 1
+}
+
+function toStopInfinity() {
+    clearInterval(stop)
 }
