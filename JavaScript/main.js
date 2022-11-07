@@ -432,12 +432,13 @@ function sendTextV2(text) {
 
 function addNameForm() {
     let msg = document.getElementById("nome");
-    msg.value = "\"Kenobi!\""
+    if (nome.value == "") { msg.value = "Kenobi!" }
+    else document.getElementById("msg").innerHTML += " " + nome.value
 }
 
 function getNumber() {
     //let textInput = numero.value;
-    document.getElementById("showNumber").innerHTML += numero.value +"<p></p>"
+    document.getElementById("showNumber").innerHTML += numero.value + "<p></p>"
 }
 
 function getRandomNumber() {
@@ -453,4 +454,28 @@ function getSum() {
     let _valor1 = parseInt(valor1), _valor2 = parseInt(valor2)
 
     document.getElementById("resultadoSoma").innerHTML = _valor1 + _valor2;
+}
+
+function listCounter() {
+    let listedNumber = undefined;
+    for (i = 1; i <= 10; i++) {
+        if (listedNumber = i) { document.querySelector("#list-Counted").appendChild(document.createElement("li")).innerHTML = listedNumber }
+
+    }
+}
+
+function listCounter2() {
+    let msg = document.getElementById("texto1");
+    if (texto1.value == "") { msg.value = "Kenobi!" }
+    else 
+    document.querySelector("#list-Counted2").appendChild(document.createElement("li")).innerHTML += texto1.value;
+    texto1.value = "";
+
+}
+
+function alertTheCount (){
+    let listedItem = "";
+    let liArray = document.querySelectorAll("#list-Counted li")
+    for (i of liArray) {listedItem = listedItem += liArray[i]}
+alert(listedItem)
 }
