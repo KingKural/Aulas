@@ -343,8 +343,8 @@ function itsVaderTimeBomb(hour) {
     let data = new Date();
     return newData = new Date(data.setHours(hour)).toString();
 }
-function itsVaderTimeBombV2(date,hour) {
-    l   return newData = new Date(date.setUTCHours(date.getHours()+1+hour));
+function itsVaderTimeBombV2(date, hour) {
+    return newData = new Date(date.setUTCHours(date.getHours() + 1 + hour));
 }
 
 function weekEnd(data) {
@@ -357,4 +357,100 @@ function weekEnd(data) {
     else {
         return "Dia de Trabalho"
     }
+}
+
+function dayBeforeTomorrow(day) {
+    return new Date(day.setDate(day.getDate() - 1));
+}
+
+function biggestDay(day1, day2, day3) {
+    if (day1.getTime() > day2.getTime() && day1.getTime() > day3.getTime()) { return day1.getDate() + "/" + day1.getMonth() + "/" + day1.getFullYear() }
+    else if (day2.getTime() > day1.getTime() && day2.getTime() > day3.getTime()) { return day2.getDate() + "/" + day2.getMonth() + "/" + day2.getFullYear() }
+    else if (day3.getTime() > day2.getTime() && day3.getTime() > day1.getTime()) { return day3.getDate() + "/" + day3.getMonth() + "/" + day3.getFullYear() }
+    else { return "The dates are Equal!" }
+}
+
+function smalestDay(day1, day2, day3) {
+    if (day1.getTime() < day2.getTime() && day1.getTime() < day3.getTime()) { return day1.getDate() + "/" + day1.getMonth() + "/" + day1.getFullYear() }
+    else if (day2.getTime() < day1.getTime() && day2.getTime() < day3.getTime()) { return day2.getDate() + "/" + day2.getMonth() + "/" + day2.getFullYear() }
+    else if (day3.getTime() < day2.getTime() && day3.getTime() < day1.getTime()) { return day3.getDate() + "/" + day3.getMonth() + "/" + day3.getFullYear() }
+    else { return "The dates are Equal!" }
+}
+
+function smalestDayV2(dates) {
+    let minDate = undefined;
+    for (let i = 0; i < dates.length; i++) {
+        if (i == 0) {
+            minDate = dates[i];
+        } else {
+            if (minDate > dates[i]) {
+                minDate = dates[i];
+            }
+        }
+    }
+    return minDate
+}
+
+function biggestDayV2(dates) {
+    let maxDate = undefined;
+    for (let i = 0; i < dates.length; i++) {
+        if (i == 0) {
+            maxDate = dates[i];
+        } else {
+            if (maxDate < dates[i]) {
+                maxDate = dates[i];
+            }
+        }
+    }
+    return maxDate
+}
+
+function whatDay(dataToSearch) {
+    const weekDay = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+    return "Hoje é " + weekDay[dataToSearch.getDay()] + "!"
+}
+
+function todayDiv() {
+    let dC = new Date();
+
+    let dataToShow = dC.getDate() + "/" + dC.getMonth() + "/" + dC.getFullYear()
+
+    document.getElementById("data").innerHTML = dataToShow
+}
+
+
+function sendText() {
+    let msg = document.getElementById("msg");
+    msg.innerHTML += " Kenobi!"
+}
+
+function sendTextV2(text) {
+    let textToSend = text;
+    let msg = document.getElementById("msg");
+    msg.innerHTML += textToSend
+}
+
+function addNameForm() {
+    let msg = document.getElementById("nome");
+    msg.value = "\"Kenobi!\""
+}
+
+function getNumber() {
+    //let textInput = numero.value;
+    document.getElementById("showNumber").innerHTML += numero.value +"<p></p>"
+}
+
+function getRandomNumber() {
+
+    let nbr = Math.floor(Math.random() * 101)
+    //let textInput = numero.value;
+    document.getElementById("showNumber").innerHTML += numeroR.value + " " + nbr + "<p></p>"
+}
+
+function getSum() {
+    let valor1 = document.getElementById("soma1").value;
+    let valor2 = document.getElementById("soma2").value;
+    let _valor1 = parseInt(valor1), _valor2 = parseInt(valor2)
+
+    document.getElementById("resultadoSoma").innerHTML = _valor1 + _valor2;
 }
