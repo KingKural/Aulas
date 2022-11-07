@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> JavaScript</title>
     <script src="/JavaScript/main.js"></script>
+    <script src="/JavaScript/dom-code.js"></script>
 </head>
 
 <body>
@@ -17,36 +18,62 @@
         <p id="msg"> General</p>
     </div>
 
-    <input type="text" id="nome" name="nome">
+    <input type="text" id="nome" name="nome" placeholder="Enter a name or Click Ear x2">
     <button onclick="addNameForm()">Click Ear</button>
 
-    <input type="text" id="numero" name="numero">
+    <input type="text" id="numero" name="numero" placeholder="Input Text then Click -->">
     <button onclick="getNumber()">Click Ear Again</button>
-    <div id="showNumber"></div>
+    <button onclick="getRandomNumber()">Click Ear to add Random #</button>
+    
+    <div id="showNumber"> Start Listing<br> </div>
 
-    <input type="text" id="numeroR" name="numeroR">
-    <button onclick="getRandomNumber()">Click Random Ear</button>
+    
     <div id="showNumber"></div>
 
     <div id="soma">
-        <input type="text" id="soma1" name="soma1">
-        <input type="text" id="soma2" name="soma2">
-        <button onclick="getSum()">Click Sum Ear </button>
+        <input type="text" id="soma1" name="soma1" placeholder="Number to Sum">
+        <input type="text" id="soma2" name="soma2" placeholder="Number to Sum">
+        <button onclick="getSum()">Click Ear to Sum</button>
         <div id="resultadoSoma"></div>
     </div>
 
     <p>
-    <div id="list-counter"> <b>"Lest's Count to 10"<button onclick="listCounter()"> Click Ear to Count </button> </b>
+    <div id="list-counter"> <b>"Lest's Count to 10" <button onclick="listCounter()"> Click Ear to Count </button> </b>
         <ul id="list-Counted"></ul>
     </div>
     </p>
 
     <p>
-    <div id="list-counter2"> <b><input type="text" id="texto1" name="texto1" placeholder="Lest's List"><button onclick="listCounter2()"> Click Ear List</button></b>
+    <div id="list-counter2"> <b><input type="text" id="texto1" name="texto1"
+                placeholder="Input Text then Click -->"><button onclick="listCounter2()"> Click Ear to List</button></b>
         <ul id="list-Counted2"></ul>
     </div>
     </p>
-    <button onclick="alertTheCount()"> Click Ear to Alert</button>
+    <button onclick="alertTheCount()"> Click Ear to Alert! "Let's Count"</button>
+
+    <div class="Aula">
+        
+        <h1>Aula</h1>
+        <button onclick="alertTheMessages()"> Click Ear to Alert! "My Messages"</button>
+        <div id="message-list">
+            <h3> My Messages</h2>
+            <p>My Message 01</p>
+            <p>My Message 02</p>
+            <p>My Message 03</p>
+            <p>My Message 04</p>
+            <p>My Message 05</p>
+        </div>
+        <div id="counter" style="border: 1px solid black">
+            <button onclick="countUp()">Count Up</button> 
+            <button onclick="countDown()">Count Down</button>
+            <button onclick="resetIt()">Reset</button>
+            <span>1</span>
+        </div>
+
+
+    </div>
+
+
 </body>
 
 
