@@ -55,44 +55,100 @@
     <div class="Aula">
 
         <h1>Aula</h1>
-        <button onclick="alertTheMessages()"> Click Ear to Alert! "My Messages"</button>
-        <div id="message-list">
-            <h3> My Messages</h2>
-                <p>My Message 01</p>
-                <p>My Message 02</p>
-                <p>My Message 03</p>
-                <p>My Message 04</p>
-                <p>My Message 05</p>
-        </div>
-        <div id="counter">
-            <button onclick="countUp()">Count Up</button>
-            <button onclick="countDown()">Count Down</button>
-            <button onclick="resetIt()">Reset</button>
-            <br><span>1</span>
-        </div>
-        <div id="select-color">
-            <select name="color" id="colorToSelect" onchange="color()">
-                <option value="red">red</option>
-                <option value="blue">blue</option>
-                <option value="yellow">yellow</option>
-                <option value="green">green</option>
-                <option value="white">white</option>
-                <option value="black">black</option>
-                
-            </select>
-            <span class="colorBox"></span>
-
-            <div id="clock-counter">
-                <button onclick="toInfinity()">Count Up</button>
-                <button onclick="toStopInfinity()">Stop</button>
-                
-                <br><span>1</span>
-            </div>
-
-        </div>
-
-
     </div>
+    <button onclick="alertTheMessages()"> Click Ear to Alert! "My Messages"</button>
+    <div id="message-list">
+        <h3> My Messages</h2>
+            <p>My Message 01</p>
+            <p>My Message 02</p>
+            <p>My Message 03</p>
+            <p>My Message 04</p>
+            <p>My Message 05</p>
+    </div>
+    <div id="counter">
+        <h3>Count to 10</h3>
+        <button onclick="countUp()">Count Up</button>
+        <button onclick="countDown()">Count Down</button>
+        <button onclick="resetIt()">Reset</button>
+        <br><span>0</span>
+    </div>
+    <div id="select-color">
+        <h3> Go! Go! Power Rangers!</h3>
+        <select name="color" id="colorToSelect" onchange="color()">
+            <option value="white">white</option>
+            <option value="blue">blue</option>
+            <option value="yellow">yellow</option>
+            <option value="green">green</option>
+            <option value="red">red</option>
+            <option value="black">black</option>
+            <option value="pink">pink</option>
+
+        </select>
+        <span class="colorBox"></span>
+    </div>
+    <div id="clock-counter">
+        <h3> To Infinity && Beyond! <br>**Under Maintenance**</h3>
+        <button class="infinityButton" onclick="toInfinity()">Count Up</button>
+        <button onclick="toStopInfinity()">Stop</button>
+
+        <br><span>1</span>
+    </div>
+
+    <div id="calculator">
+        <h2> Calculator</h2>
+        <input type="text" id="numba1" name="numba1" placeholder="Number to Calculate">
+        <select name="calcValue" id="symbolMath">
+            <option value="+">adição</option>
+            <option value="-">subtração</option>
+            <option value="*">multiplicação</option>
+            <option value="/">divisão</option>
+        </select>
+        <input type="text" id="numba2" name="numba2" placeholder="Number to Calculate 2">
+        <button onclick="calculateMe()">Calculate Me!</button> <span id="calcResults"> </span>
+    </div>
+
+    <div id="totolotoKural">
+        <h2>Totoloto!</h2>
+        <input type="text" class="lotoBox" id="loto1" name="loto1" placeholder="#">
+        <input type="text" class="lotoBox" id="loto2" name="loto2" placeholder="#">
+        <input type="text" class="lotoBox" id="loto3" name="loto3" placeholder="#">
+        <input type="text" class="lotoBox" id="loto4" name="loto4" placeholder="#">
+        <input type="text" class="lotoBox" id="loto5" name="loto5" placeholder="#">
+        <input type="text" class="lotoBox" id="loto6" name="loto6" placeholder="#">
+        <button onclick="totolotoNacionalKural()"> Mude de Vida!</button>
+        <br><b>Your Number</b><span id="playerNumber"> #,#,#,#,#,# </span> <br><b>Totoloto </b><span id="lotoNumber">
+            #,#,#,#,#,# </span>
+        <h3 id="lotoResults"></h3>
+    </div>
+
+    <div id="totolotoAula">
+        <input type="number" value="" />
+        <input type="number" value="" />
+        <input type="number" value="" />
+        <input type="number" value="" />
+        <input type="number" value="" />
+        <input type="number" value="" />
+        <button onclick="totolotoResult()">Submit</button>
+        <br>
+        <span>The number is: </span><span class="totoloto-num"></span>
+        <br>
+        <span>Correct number: </span><span class="correct-num"></span>
+        <br>
+        <span>Wrong number: </span><span class="wrong-num"></span>
+    </div>
+
+    <div id="animationEx">
+        <button onclick="animateTheBall()">Animate the Ball</button>
+        <button onclick="stopTheBall()">Stop the Ball</button>
+
+        <span id="theBall"><span>Le Bol</span></span>
+
+        
+    </div>
+
+
+
+
 
 
 </body>

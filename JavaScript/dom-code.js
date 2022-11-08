@@ -22,6 +22,7 @@ function addNameForm() {
     let msg = document.getElementById("nome");
     if (nome.value == "") { msg.value = "Kenobi!" }
     else document.getElementById("msg").innerHTML += " " + nome.value
+
 }
 
 function getNumber() {
@@ -106,7 +107,7 @@ function countDown() {
 function resetIt() {
     let span = document.querySelector("#counter span");
 
-    document.querySelector("#counter span").textContent = 1;
+    document.querySelector("#counter span").textContent = 0;
     colorChange(span)
 }
 
@@ -123,10 +124,109 @@ function color() {
 let stop = undefined;
 
 function toInfinity() {
+    //not working
     let span = document.querySelector("#clock-counter span");
     span.textContent = parseInt(span.textContent) + 1
 }
 
 function toStopInfinity() {
+    //invalid
     clearInterval(stop)
+}
+
+function calculateMe() {
+    let numba1 = document.getElementById("numba1").value;
+    let numba2 = document.getElementById("numba2").value;
+    let symbol = document.querySelector("#symbolMath").value;
+    let results = document.getElementById("calcResults");
+
+    if (symbol == "+") { results.innerHTML = parseInt(numba1) + parseInt(numba2) }
+    else if (symbol == "-") { results.innerHTML = parseInt(numba1) - parseInt(numba2) }
+    else if (symbol == "*") { results.innerHTML = parseInt(numba1) * parseInt(numba2) }
+    else if (symbol == "/") { results.innerHTML = parseInt(numba1) / parseInt(numba2) };
+}
+
+function totolotoNacionalKural() {
+    let loto1 = document.getElementById("loto1").value;
+    let loto2 = document.getElementById("loto2").value;
+    let loto3 = document.getElementById("loto3").value;
+    let loto4 = document.getElementById("loto4").value;
+    let loto5 = document.getElementById("loto5").value;
+    let loto6 = document.getElementById("loto6").value;
+    let yourArray = [parseInt(loto1), parseInt(loto2), parseInt(loto3), parseInt(loto4), parseInt(loto5), parseInt(loto6)]
+    let lotoResults = 0
+    let lotoArray = []
+    for (i = 0; lotoArray.length < 6; i++) {
+        lotoArray[i] = Math.floor(Math.random() * 100) + 1
+    }
+    document.getElementById("lotoNumber").textContent = lotoArray;
+    document.getElementById("playerNumber").textContent = yourArray;
+
+    for (i = 0; i < lotoArray.length; i++) {
+        if (lotoArray[i] == yourArray[i]) { lotoResults = lotoResults + 1 }
+        else { lotoResults = lotoResults + 0 }
+    };
+
+    console.log(lotoResults)
+
+    if (lotoResults == 6) { document.getElementById("lotoResults").innerHTML = "A Winner Is You!" }
+    else if (lotoResults == 5) { document.getElementById("lotoResults").innerHTML = "2nd Prize!" }
+    else if (lotoResults == 4) { document.getElementById("lotoResults").innerHTML = "3rd Prize!" }
+    else { document.getElementById("lotoResults").innerHTML = "Maybe Next Time!" }
+}
+
+function generateTotolotoNumbers() {
+    let totolotoNumbers = [];
+
+    for (let i = 0; i < 6; i++) {
+        let generatedNumber = Math.floor(Math.random() * 49) + 1;
+
+        while (totolotoNumbers.includes(generatedNumber) == true) {
+            generatedNumber = Math.floor(Math.random() * 49) + 1;
+        }
+        totolotoNumbers.push(generatedNumber);
+    }
+    return totolotoNumbers;
+}
+
+function totolotoResult() {
+    let totolotoNumbers = generateTotolotoNumbers();
+    let correctNumbers = [];
+    let wrongNumbers = [];
+
+    let inputList = document.querySelectorAll("#totolotoAula input");
+
+    for (input of inputList) {
+        console.log(input);
+
+        let userNumber = parseInt(input.value);
+
+        if (totolotoNumbers.includes(userNumber) == true) {
+            correctNumbers.push(userNumber);
+        } else {
+            wrongNumbers.push(userNumber);
+        }
+    }
+
+    document.querySelector("#totolotoAula .totoloto-num")
+        .textContent = sortArray(totolotoNumbers).join(' - ');
+
+    document.querySelector("#totolotoAula .correct-num")
+        .textContent = sortArray(correctNumbers).join(' - ');
+
+    document.querySelector("#totolotoAula .wrong-num")
+        .textContent = sortArray(wrongNumbers).join(' - ');
+}
+
+function sortArray(list) {
+    return list.sort(function (a, b) { return a - b })
+}
+
+function animateTheBall() {
+    document.getElementById("theBall").style.display = inlineFlex
+
+}
+
+function stopTheBall() {
+
 }
