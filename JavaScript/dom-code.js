@@ -157,10 +157,15 @@ function totolotoNacionalKural() {
     let lotoResults = 0
     let lotoArray = []
     for (i = 0; lotoArray.length < 6; i++) {
-        lotoArray[i] = Math.floor(Math.random() * 100) + 1
+        let generatedNumber = Math.floor(Math.random() * 49) + 1;
+
+        while (lotoArray.includes(generatedNumber) == true) {
+            generatedNumber = Math.floor(Math.random() * 49) + 1;
+        }
+        lotoArray.push(generatedNumber);
     }
-    document.getElementById("lotoNumber").textContent = lotoArray;
-    document.getElementById("playerNumber").textContent = yourArray;
+    document.getElementById("lotoNumber").textContent =  sortArray(lotoArray).join(' - ');
+    document.getElementById("playerNumber").textContent = sortArray(yourArray).join(' - ');
 
     for (i = 0; i < lotoArray.length; i++) {
         if (lotoArray[i] == yourArray[i]) { lotoResults = lotoResults + 1 }
@@ -222,11 +227,44 @@ function sortArray(list) {
     return list.sort(function (a, b) { return a - b })
 }
 
+// -------------------------------------------------
+// ----------------- Ball animation ----------------
+// -------------------------------------------------
+let animationInterval;
+
+document.querySelector('#theBall').addEventListener('click', ()=>{
+    alert('You won!');
+    stopBallAnimation();
+});
+
 function animateTheBall() {
-    document.getElementById("theBall").style.display = inlineFlex
+
+    document.querySelector('#animationEx .start')
+        .disabled = true;
+
+    let ball = document.querySelector('#theBall');
+    
+    animationInterval = setInterval(()=>{
+        
+        ball.classList.toggle('hide');
+        ball.style.top=generateRandomNumbers(100) + '%';
+        ball.style.left=generateRandomNumbers(100) + '%';
+
+        
+        ball.style.width=generateRandomNumbers(300) + 'px';
+        ball.style.height = ball.style.width;
+
+    }, 1000);
 
 }
 
+function generateRandomNumbers(max) {
+    return Math.floor(Math.random() * max);
+}
+
 function stopTheBall() {
+    clearInterval(animationInterval);
+    document.querySelector('#animationEx .start')
+        .disabled = false;
 
 }
