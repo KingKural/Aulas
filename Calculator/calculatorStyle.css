@@ -1,0 +1,12 @@
+.calculatorBody {
+    border: solid 1px black;
+    width: 140px;
+}
+.calculatorButton {
+    width: 30px;
+    margin-bottom: 5px;
+}
+#calculatorDisplay{
+    font-weight: bold;
+
+}

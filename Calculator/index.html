@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/calculatorStyle.css">
+    <script src="/calculatorInput1.js"></script>
+    <script src="/calculatorInput2.js"></script>
+    <script src="/calculatorTotal.js"></script>
+</head>
+<body>
+    <div class="calculatorBody">
+        <span id="calculatorDisplay">0</span>
+        <br>
+        <button class="calculatorButton" id ="1" onclick="calcButton1()">1</button>
+        <button class="calculatorButton" id="2" onclick="calcButton2()">2</button>
+        <button class="calculatorButton" id="3" onclick="calcButton3()">3</button>
+        <button class="calculatorButton" id="plus" onclick="calcButtonPlus()">+</button>
+        <br>
+        <button class="calculatorButton" id="4" onclick="calcButton4()">4</button>
+        <button class="calculatorButton" id="5" onclick="calcButton5()">5</button>
+        <button class="calculatorButton" id="6" onclick="calcButton6()">6</button>
+        <button class="calculatorButton" id="minus" onclick="calcButtonMinus()">-</button>
+        <br>
+        <button class="calculatorButton" id="7" onclick="calcButton7()">7</button>
+        <button class="calculatorButton" id="8" onclick="calcButton8()">8</button>
+        <button class="calculatorButton" id="9" onclick="calcButton9()">9</button>
+        <button class="calculatorButton" id="times" onclick="calcButtonTimes()" >x</button>
+        <br> 
+        <button class="calculatorButton" id="clear"onclick="calcButtonClear()">c</button>
+        <button class="calculatorButton" id="0" onclick="calcButton0()">0</button>
+        <button class="calculatorButton" id="equal" onclick="calcButtonTotal()">=</button>
+        <button class="calculatorButton" id="divides" onclick="calcButtonDivides()">÷</button>
+    </div>
+    
+</body>
+</html>
