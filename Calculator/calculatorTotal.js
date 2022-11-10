@@ -18,6 +18,5 @@ function calcButtonTotal() {
 
     
     let total = document.getElementById("calculatorDisplay").textContent = totalSplited
-    console.log(total)
     return total
 }
